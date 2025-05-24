@@ -10,11 +10,26 @@
 
 <body>
 
-  <h1>Welkom</h1>
-  <!-- De button hieronder is alleen voor testdoeleinden bij het opstarten van het project.
-     Deze pagina is bedoeld voor de uitleg van jullie escape room. -->
+  <h1>Welkom!</h1>
 
-  <button><a href="room_1.php">Klik hier voor een demonstratie van kamer 1</a></button>
+  <main>
+    <!-- Escape Room Information -->
+    <div class="info-box">
+      <h2>Over de Escape Room</h2>
+      <p>
+        Welkom bij onze Escape Room! Los puzzels op, vind verborgen aanwijzingen en werk samen om binnen de tijd te ontsnappen.
+        Elke kamer zit vol verrassingen. Durf jij de uitdaging aan?
+      </p>
+    </div>
+
+    <!-- Test Button -->
+    <button><a href="room_1.php">Klik hier voor een demonstratie van kamer 1</a></button>
+  </main>
+
+  <!-- Footer stays at bottom -->
+  <footer>
+    Gemaakt door Gracjan en Danny
+  </footer>
 
 </body>
 
