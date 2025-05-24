@@ -10,7 +10,7 @@
 
 <body>
 
-  <h1>Welkom!</h1>
+  <h1>Welkom!</h1> 
 
   <main>
     <!-- Escape Room Information -->

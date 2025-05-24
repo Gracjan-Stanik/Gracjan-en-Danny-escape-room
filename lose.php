@@ -10,7 +10,7 @@
 
 <body>
 
-  <h1>Helaas verloren!</h1>
+  <h1>Helaas verloren!</h1> 
 
   <main>
     <div class="info-box" style="text-align: center;">
