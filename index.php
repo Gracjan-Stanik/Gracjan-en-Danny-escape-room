@@ -6,11 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escape Room</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-image: url('IMG/cowboy.jpeg');
+      background-size: cover;
+      background-position: center;
+     background-repeat: no-repeat;
+   }
+  </style>
+
 </head>
 
 <body>
 
-  <h1>Welkom!</h1> 
+  <h1>Cowboy escape room</h1> 
 
   <main>
     <!-- Escape Room Information -->
@@ -23,13 +33,8 @@
     </div>
 
     <!-- Test Button -->
-    <button><a href="room_1.php">Klik hier voor een demonstratie van kamer 1</a></button>
+    <button><a href="room_1.php">Begin met de escaperoom</a></button>
   </main>
-
-  <!-- Footer stays at bottom -->
-  <footer>
-    Gemaakt door Gracjan en Danny
-  </footer>
 
 </body>
 

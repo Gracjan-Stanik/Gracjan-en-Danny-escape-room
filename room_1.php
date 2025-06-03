@@ -17,6 +17,17 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escape Room 1</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-image: url('IMG/gunstore.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+</style>
+
 </head>
 
 <body>
@@ -37,8 +48,8 @@ try {
   <section class="modal" id="modal">
     <h2>Escape Room Vraag</h2>
     <p id="question"></p>
-    <input type="text" id="answer" placeholder="Typ je antwoord">
-    <button onclick="checkAnswer()">Verzenden</button>
+    <input type="text" id="answer" placeholder="Antwoord"><br>
+    <button onclick="checkAnswer()">Antwoord</button>
     <p id="feedback"></p>
   </section>
 

@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Escape Room - You Win!</title>
   <link rel="stylesheet" href="style.css" />
+
+  
+  <style>
+    body {
+      background-image: url('IMG/win.webp');
+      background-size: cover;
+      background-position: center;
+     background-repeat: no-repeat;
+   }
+  </style>
+
 </head>
 
 <body>
@@ -21,10 +32,6 @@
     <a href="index.php" class="btn">Terug naar startpagina</a>
 
   </main>
-
-  <footer>
-    Gemaakt door Gracjan en Danny
-  </footer>
 
 </body>
 
