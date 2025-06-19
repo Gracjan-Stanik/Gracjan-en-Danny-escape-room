@@ -19,7 +19,17 @@ try {
   <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    body {
+      background-image: url('IMG/saloon.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+</style>
 <body>
+   <div class="timer-display" id="timer">05:00</div>
 
   <div class="container">
     <?php foreach ($questions as $index => $question) : ?>
@@ -42,6 +52,37 @@ try {
   </section>
 
   <script src="app.js"></script>
+  <script>
+    // Timer functionality
+    const timeLimit = 5 * 60; // 5 minutes in seconds
+    let timeLeft = timeLimit;
+    let timer;
+
+    function startTimer() {
+      const timerDisplay = document.getElementById('timer');
+      
+      function updateDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      }
+      
+      updateDisplay();
+      
+      timer = setInterval(() => {
+        timeLeft--;
+        updateDisplay();
+        
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          window.location.href = 'lose.php';
+        }
+      }, 1000);
+    }
+
+    // Start timer when page loads
+    window.onload = startTimer;
+  </script>
 
 </body>
 

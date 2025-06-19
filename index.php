@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Redirect naar login als niet ingelogd
+if (!isset($_SESSION["user_id"])) {
+    header("Location: user/login.php");
+    exit;
+}
+
+// Haal info uit sessie
+$username = $_SESSION["username"];
+$is_admin = $_SESSION["is_admin"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +31,18 @@
   </style>
 
 </head>
-
+  
 <body>
 
   <h1>Cowboy escape room</h1> 
+
+  <?php if ($is_admin): ?>
+    <section class="adminaccess">
+      <p style="color:green;">[ADMIN ACCESS]</p>
+        <a href="admin/admin_questions.php" class="btn">questions CRUD</a>
+        <a href="user/add_team.php" class="btn">Team CRUD</a>
+    </section>
+    <?php endif; ?>
 
   <main>
     <!-- Escape Room Information -->
@@ -33,8 +55,10 @@
     </div>
 
     <!-- Test Button -->
-    <button><a href="room_1.php">Begin met de escaperoom</a></button>
-  </main>
+    <a href="room_1.php" class="btn">Start het spel</a><br>
+    <a href="user/logout.php" class="btn">Uitloggen</a><br>
+    
+    </main>
 
 </body>
 

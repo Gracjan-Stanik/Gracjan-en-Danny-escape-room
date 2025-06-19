@@ -31,6 +31,7 @@ try {
 </head>
 
 <body>
+   <div class="timer-display" id="timer">05:00</div>
 
   <div class="container">
     <?php foreach ($questions as $index => $question) : ?>
@@ -54,6 +55,43 @@ try {
   </section>
 
   <script src="app.js"></script>
+
+  <script>
+  // Timer functionality - TEST VERSION (20 seconds)
+let timeLeft = 5 * 60; // Changed to 20 seconds for testing
+let timer;
+
+function startTimer() {
+    const timerDisplay = document.getElementById('timer');
+    
+    function updateDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        // Change warning to last 10 seconds (for testing)
+        if (timeLeft <= 60) {
+            timerDisplay.style.color = '#ff0000';
+            timerDisplay.style.animation = 'blink 1s infinite';
+        }
+    }
+    
+    updateDisplay();
+    
+    timer = setInterval(() => {
+        timeLeft--;
+        updateDisplay();
+        
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            window.location.href = 'lose.php';
+        }
+    }, 1000);
+}
+
+// Start timer when page loads
+window.onload = startTimer;
+  </script>
 
 </body>
 

@@ -78,10 +78,10 @@ button {
 
 .info-box {
   max-width: 600px;
-  margin: 30px auto;
-  margin-top: 20%;
+  margin: auto;
+  margin-top: 50px;
   padding: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -119,5 +119,40 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #2980b9;
+  transition: 0.5s ease;
+  background-color: darkred;
+  transform: scale(1.2);
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.timer-display {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.login-text { color: white; }
+
+.adminaccess{
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: white;
 }
